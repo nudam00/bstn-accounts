@@ -80,9 +80,7 @@ class BSTNGen():
 
         headers = {
             'Referer': 'https://www.bstn.com/it/',
-            'User-Agent': self.get_random_ua(),
-            'x-requested-with':	'XMLHttpRequest',
-            'cache-control':'max-age=0'
+            'User-Agent': self.get_random_ua()
         }
 
         name = names.get_first_name(gender='male')
@@ -175,14 +173,17 @@ class BSTNGen():
                     self.errorstatus("Error: you don't have any proxies.")
                     sys.exit()
             
-            print(accountPost.text)
+            #print(accountPost.text)
             
-            if 'kundenkonto' in accountPost.text or accountPost.status_code == 200:
+            if 'ERRORE' not in accountPost.text and accountPost.status_code == 200:
                 
                 with open("accounts.txt", "a") as accounts:
                     accounts.write(email + ':' + self.password + "\n")
                 
                     self.success('Account successfully created!')
+            
+            else:
+                self.error('Error while creating account.')
 
         except requests.exceptions.ConnectionError:
             pass
