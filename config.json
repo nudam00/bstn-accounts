@@ -1,0 +1,14 @@
+{ 
+  "accounts": 2,
+  "captcha_solver": "",
+  "api_key": "",
+  "catchall":  "",
+  "password": "",
+  "address_last_name": "",
+  "address_street": "",
+  "address_street_number": "",
+  "address_street_2": "",
+  "address_zipcode": "",
+  "address_city": "",
+  "address_country_id": ""
+}

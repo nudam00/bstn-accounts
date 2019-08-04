@@ -1,1 +1,1 @@
-# bstn-accounts
+# BSTN Account Generator
