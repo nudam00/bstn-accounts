@@ -1,3 +1,6 @@
+# BSTN Account Generator
+# Developed by @icysevnth - sevnth#0007
+
 from classes.account_gen import BSTNGen
 import json
 

@@ -1,3 +1,6 @@
+# BSTN Account Generator
+# Developed by @icysevnth - sevnth#0007
+
 import requests
 import names
 import random
