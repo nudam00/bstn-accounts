@@ -123,8 +123,6 @@ class BSTNGen():
             sys.exit()
 
         try:
-            
-            #print(self.choose_proxy(self.proxies))
 
             parameters = {
                 "personal[email]": email,
@@ -170,7 +168,7 @@ class BSTNGen():
                     accountPost = self.s.post("https://www.bstn.com/it/register/address", data=parameters, headers=headers, proxies=self.choose_proxy(self.proxies))
                 
                 else:
-                    self.errorstatus("Error: you don't have any proxies.")
+                    self.errorstatus("You don't have any proxies.")
                     sys.exit()
             
             #print(accountPost.text)
@@ -188,7 +186,7 @@ class BSTNGen():
         except requests.exceptions.ConnectionError:
             pass
         except Exception as e:
-            self.error('An exception occured: {}'.format(e.__class__.__name_))
+            self.error('An exception occured: {}'.format(e.__class__.__name__))
             time.sleep(2)
             sys.exit()
         
